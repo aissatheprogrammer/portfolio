@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#DCF1F9]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <style>
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+
+        height: 500px;
+        object-fit: cover;
+      }
+
+      .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .swiper-pagination-bullet-active {
+        color: #fff;
+        background: #007aff;
+      }
+    </style>
+    <div class="flex items-center mt-9 ml-36">
+      <a href="../index.html">
+        <img
+          src="../img/back-arrow.svg"
+          alt="Back Arrow"
+          class="transition-opacity hover:opacity-50"
+        />
+      </a>
+      <h2 class="font-bold text-5xl ml-1">Calculateur Nutri Score</h2>
+    </div>
+
+    <div class="swiper mySwiper max-w-3xl h-96 ml-36 mt-6">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="../projects-thumbnail/project-nutriscore/homepage_picture.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="../projects-thumbnail/project-nutriscore/result_nutriscore_web.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="../projects-thumbnail/project-nutriscore/nutriscore_calc.webp"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <div class="ml-36">
+      <img
+        src="../projects-thumbnail/project-nutriscore/homepage_picture.png"
+        alt="Project image"
+      />
+    </div> -->
+
+    <h3 class="ml-36 font-bold mt-8 text-3xl">Description</h3>
+    <p class="ml-36 mt-4 max-w-5xl">
+      Le Nutri-Score est un indicateur qui permet de evaluer la qualité d'un
+      produit alimentaire. L'objectif de ce projet est de developper un
+      prototype d'application web qui permet de prédire le Nutri-Score d'un
+      produit alimentaire à partir de données entrées par l'utilisateur. Le
+      modèle de prediction utilisé est un modèle de classification (Decision
+      Tree) entrainé à partir de la base de donées Open Food Facts.
+    </p>
+    <h4 class="ml-36 mt-2.5 font-bold text-lg">Contenu de l'application:</h4>
+
+    <div class="ml-36 mt-1.5 max-w-4xl">
+      <p>
+        Formulaire contenant différents champs qui doivent être renseignés par
+        l'utilisateur :
+      </p>
+      <ul class="list-disc ml-6">
+        <li>Energie en kj</li>
+        <li>Matières Grasses</li>
+        <li>Sucres</li>
+        <li>Fibres</li>
+        <li>Protéines</li>
+        <li>Sel</li>
+        <li>Pourcentage Fruits &amp; Legumes</li>
+      </ul>
+      <p>
+        Une fois les champs renseignés, le Nutri-Score predit est affiché sur
+        une autre page.
+      </p>
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

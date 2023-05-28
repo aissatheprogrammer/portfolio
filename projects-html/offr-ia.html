@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#DCF1F9]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- <style>
+      body {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        background-image: url("../img/backgound-gradients.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: multiply;
+        z-index: -1;
+      }
+    </style> -->
+  </head>
+  <body>
+    <style>
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+
+        height: 500px;
+        object-fit: cover;
+      }
+
+      .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .swiper-pagination-bullet-active {
+        color: #fff;
+        background: #007aff;
+      }
+    </style>
+    <div class="flex items-center mt-9 ml-36">
+      <a href="../index.html">
+        <img
+          src="../img/back-arrow.svg"
+          alt="Back Arrow"
+          class="transition-opacity hover:opacity-50"
+        />
+      </a>
+      <h2 class="font-bold text-5xl ml-1">OffrIA</h2>
+    </div>
+
+    <div class="swiper mySwiper max-w-3xl h-96 ml-36 mt-6">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="../projects-thumbnail/projet-jobboard/home_page_offria.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="../projects-thumbnail/projet-jobboard/home_page_offria2.png"
+            alt=""
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="../projects-thumbnail/projet-jobboard/map_offia.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="../projects-thumbnail/projet-jobboard/recherche_offia.png"
+            alt=""
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="../projects-thumbnail/projet-jobboard/recherche_cv.png"
+            alt=""
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="../projects-thumbnail/projet-jobboard/lettre_motivation_offre.png"
+            alt=""
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="../projects-thumbnail/projet-jobboard/trad_offia.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <div class="ml-36">
+      <img
+        src="../projects-thumbnail/projet-jobboard/homepage_picture.png"
+        alt="Project image"
+      />
+    </div> -->
+
+    <h3 class="ml-36 font-bold mt-8 text-3xl">Description</h3>
+    <p class="ml-36 mt-4 max-w-5xl">
+      Application Django qui a pour but d'aider les personnes dans leur
+      recherche d'emploi dans le domaine de la data et de l'IA.
+    </p>
+    <h4 class="ml-36 mt-2.5 font-bold text-lg">Contenu de l'application:</h4>
+
+    <div class="ml-36 mt-1.5 max-w-4xl">
+      <ul class="list-disc ml-6">
+        <li>
+          Un dashboard présentant des statistiques sur les offres disponibles
+        </li>
+        <li>Une cartographie des offres dans toute la France</li>
+        <li>
+          Un système de recherche avancée qui permet d'afficher les offres
+          d'emploi correspondant à certains critères (métier, date,
+          mots-clés...)
+        </li>
+        <li>
+          Un système de génération de lettre de motivation adaptée à l'intitulé
+          et aux mots-clés d'une offre sélectionnée par l'utilisateur ainsi qu'à
+          son profil
+        </li>
+        <li>
+          Une fonction de traduction des offres (toute langue --> français |
+          français --> anglais)
+        </li>
+        <li>
+          Un chatbot qui apporte une assistance à l'utilisateur dans sa
+          candidature
+        </li>
+        <li>
+          Une aide à la candidature matérialisée par une redirection vers des
+          liens contenant divers conseils (pour la rédaction du CV, l'entretien
+          d'embauche...)
+        </li>
+      </ul>
+    </div>
+
+    <h4 class="ml-36 mt-2.5 font-bold text-lg">Modèles utilisés</h4>
+
+    <div class="ml-36 mt-1.5 max-w-3xl">
+      <ul class="list-disc ml-6">
+        <li>
+          Azure Named Entity Recognition (NER) et modèle naïf correspondant
+        </li>
+        <p class="mt-1.5 ml-8 italic">
+          L'API d'Azure Named Entity Recognition et le modèle naïf correspondant
+          nous ont servi à identifier les compétences présentes dans le CV pdf
+          de l'utilisateur pour les faire correspondre à une liste d'offres
+          contenant les compétences extraites du CV.
+        </p>
+        <li class="mt-1.5">Keywords extraction (KeyBERT)</li>
+        <p class="mt-1.5 ml-8 italic">
+          KeyBERT est un projet Python qui a pour but de simplifier l'extraction
+          de mots-clés d'un texte. Ce modèle nous a servi à extraire les
+          mots-clés de la description d'une offre pour laquelle l'utilisateur
+          aimerait postuler. Ces mots-clés sont ensuite utilisés pour adapter la
+          génération de la lettre de motivation à la description de l'offre en
+          question.
+        </p>
+        <li class="mt-1.5">
+          Génération d'une lettre de motivation avec le module de complétion de
+          l'API OpenAI
+        </li>
+        <p class="mt-1.5 ml-8 italic">
+          L'API d'OpenAI fournit un service de complétion permettant de générer
+          du texte à partir d'un bout de texte écrit par l'utilisateur. Nous
+          l'avons utilisée pour générer une lettre de motivation adaptée à
+          l'offre sélectionnée par l'utilisateur et à son profil.
+        </p>
+        <li class="mt-1.5">Détection du langage et traduction</li>
+        <p class="mt-1.5 ml-8 italic">
+          Les bibliothèques python utilisées sont langdetect et deeptranslator.
+          La première permet de détecter le langage utilisé dans le texte et la
+          seconde permet de le traduire.
+        </p>
+      </ul>
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

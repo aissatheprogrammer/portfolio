@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
+    <style>
+      body {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("img/backgound-gradients.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: multiply;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body class="demo-1 bg-[#DCF1F9]">
+    <main>
+      <div class="background-blob">
+        <div class="content">
+          <canvas class="scene scene--full" id="scene"></canvas>
+          <script type="x-shader/x-vertex" id="wrapVertexShader">
+            attribute float size;
+            attribute vec3 color;
+            varying vec3 vColor;
+            void main() {
+              vColor = color;
+              vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+              gl_PointSize = size * ( 350.0 / - mvPosition.z );
+              gl_Position = projectionMatrix * mvPosition;
+            }
+          </script>
+          <script type="x-shader/x-fragment" id="wrapFragmentShader">
+            varying vec3 vColor;
+            uniform sampler2D texture;
+            void main(){
+              vec4 textureColor = texture2D( texture, gl_PointCoord );
+              if ( textureColor.a < 0.3 ) discard;
+              vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
+              gl_FragColor = color;
+            }
+          </script>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/demo.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/demo1.js"></script>
+
+    <div class="absolute inset-0 flex flex-col items-center justify-center">
+      <h1 class="text-[#DCF1F9] text-9xl inline-block">
+        Aissa <b>Mabroumi</b>
+      </h1>
+      <h2 class="text-[#FF9F7D] mt-2 font-bold text-5xl">Data Engineer</h2>
+    </div>
+
+    <h1 class="text-white font-bold mt-52 text-8xl ml-36">Hi, I’m Aissa</h1>
+
+    <h3 class="text-xl mt-36 ml-auto max-w-4xl">
+      A multi-skilled individual with extensive experience in the field of
+      programming. <br />
+      I am an ambitious person, constantly seeking new challenges to surpass my
+      own objectives. <br />
+      My passion for my work pushes me to attain excellence. <br />
+      My adaptability and quick learning ability are among my strong points.<br />
+      While I strive for excellence, I am aware that there is always room for
+      improvement and learning.
+    </h3>
+
+    <h2 class="text-white text-8xl font-bold text-center mt-80">Work</h2>
+
+    <div style="display: flex" class="justify-center mt-12">
+      <div class="flex flex-col items-center">
+        <a href="projects-html/offr-ia.html">
+          <img src="projects-thumbnail/projet-jobboard/logo.svg" alt="logo" />
+        </a>
+        <div class="mt-2">
+          <a href="projects-html/nutriscore.html">
+            <h4 class="text-2xl text-white font-bold">OffrIA</h4>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center ml-3.5">
+        <a href="projects-html/nutriscore.html">
+          <img
+            src="projects-thumbnail/project-nutriscore/logo.svg"
+            alt="logo"
+          />
+        </a>
+        <div class="mt-2">
+          <h4 class="text-2xl text-white font-bold">NutrIA</h4>
+        </div>
+      </div>
+      <div class="flex flex-col items-center ml-3.5">
+        <a href="projects-html/mask-detector.html"
+          ><img src="projects-thumbnail/mask-detector/logo.svg" alt="logo"
+        /></a>
+        <div class="mt-2">
+          <h4 class="text-2xl text-white font-bold">Mask Detector</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div style="display: flex" class="justify-center mt-5">
+      <div class="flex flex-col items-center">
+        <img src="projects-thumbnail/projet-jobboard/logo.svg" alt="logo" />
+        <div class="mt-2">
+          <h4 class="text-2xl text-white font-bold">OffrIA</h4>
+        </div>
+      </div>
+      <div class="flex flex-col items-center ml-3.5">
+        <img src="projects-thumbnail/project-nutriscore/logo.svg" alt="logo" />
+        <div class="mt-2">
+          <h4 class="text-2xl text-white font-bold">NutrIA</h4>
+        </div>
+      </div>
+      <div class="flex flex-col items-center ml-3.5">
+        <img src="projects-thumbnail/mask-detector/logo.svg" alt="logo" />
+        <div class="mt-2">
+          <h4 class="text-2xl text-white font-bold">Mask Detector</h4>
+        </div>
+      </div>
+    </div> -->
+
+    <h2 class="text-white text-8xl font-bold text-center mt-24">Info</h2>
+
+    <div style="display: flex" class="justify-center mt-64">
+      <div class="flex flex-col items-center">
+        <a href="https://github.com/aissatheprogrammer" target="_blank">
+          <img src="img/contact-logos/github-logo.svg" alt="GitHub Link"
+        /></a>
+      </div>
+      <div class="flex flex-col items-center ml-1.5">
+        <a href="https://www.linkedin.com/in/aissa-mabroumi/" target="_blank">
+          <img src="img/contact-logos/linkedin-logo.svg" alt="Linkedin Link" />
+        </a>
+      </div>
+      <div class="flex flex-col items-center ml-1.5">
+        <a href="img/aissa-mabroumi-cv en.pdf" target="_blank">
+          <img src="img/contact-logos/cv-logo.svg" alt="Cv Download Link"
+        /></a>
+      </div>
+    </div>
+
+    <div class="flex justify-center items-center mt-16">
+      <a href="mailto:aimabroumi@gmail.com?subject=Let's%20talk">
+        <img src="img/contact-logos/email-me-logo.svg" alt="Email logo" />
+      </a>
+    </div>
+
+    <div class="mt-36"></div>
+  </body>
+</html>
