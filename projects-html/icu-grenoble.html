@@ -39,7 +39,7 @@
           class="transition-opacity hover:opacity-50"
         />
       </a>
-      <h2 class="font-bold text-5xl ml-1">OffrIA</h2>
+      <h2 class="font-bold text-5xl ml-1">Ilots de chaleur urbains</h2>
     </div>
 
     <div class="swiper mySwiper max-w-3xl h-96 ml-36 mt-6">
@@ -104,44 +104,74 @@
 
     <h3 class="ml-36 font-bold mt-8 text-3xl">Description</h3>
     <p class="ml-36 mt-4 max-w-5xl">
-      Application Django qui a pour but d'aider les personnes dans leur
-      recherche d'emploi dans le domaine de la data et de l'IA.
+      Deux applications ont été développées, l'une avec Django et l'autre avec
+      Flask : <br />
+      <br />
+      L'application Flask a pour objectif de raconter des histoires à partir de
+      données afin de sensibiliser les citoyens de la ville de Grenoble au
+      phénomène des îlots de chaleur urbains. Elle présente des graphiques
+      interactifs et personnalisés en fonction de la localisation de
+      l'utilisateur. Les données utilisées sont mises à disposition par l'équipe
+      Open Data de la métropole pour encourager différentes collectivités de la
+      métropole à rendre leurs jeux de données accessibles en open data.
+      <br /><br />
+      L'application Django a été créée et mise à disposition des communes de la
+      métropole de Grenoble. Son objectif est d'estimer les îlots de chaleur
+      urbains propres à chaque commune. L'estimation permet d'alerter les
+      scientifiques de la métropole ou de l'Université Grenoble Alpes (UGA) en
+      cas de résultats inattendus prédits par les deux algorithmes mis en place.
+      Le premier algorithme utilise des données numériques en entrée, tandis que
+      le second utilise des images satellites. Ces algorithmes estiment la
+      classe à laquelle chaque commune appartient parmi les 5 classes créées en
+      collaboration avec les scientifiques de la métropole. Chaque classe
+      indique une fourchette de différence de température entre une ville de
+      référence (utilisée pour la comparaison) et la ville de Grenoble, en
+      prenant en compte plusieurs critères choisis par les scientifiques de la
+      métropole.
     </p>
-    <h4 class="ml-36 mt-2.5 font-bold text-lg">Contenu de l'application:</h4>
+    <h4 class="ml-36 mt-2.5 font-bold text-lg">Application Flask:</h4>
 
     <div class="ml-36 mt-1.5 max-w-4xl">
-      <ul class="list-disc ml-6">
+      <p class="mt-1.5 ml-8">
+        Vous pouvez trouver la version bêta de l'application sur le lien suivant
+        : https://aissatheprogrammer.github.io/icu_website/
+      </p>
+      <ul class="mt-1.5 list-disc ml-6">
         <li>
-          Un dashboard présentant des statistiques sur les offres disponibles
-        </li>
-        <li>Une cartographie des offres dans toute la France</li>
-        <li>
-          Un système de recherche avancée qui permet d'afficher les offres
-          d'emploi correspondant à certains critères (métier, date,
-          mots-clés...)
-        </li>
-        <li>
-          Un système de génération de lettre de motivation adaptée à l'intitulé
-          et aux mots-clés d'une offre sélectionnée par l'utilisateur ainsi qu'à
-          son profil
+          Une carte MapBox affiche les différentes Local Climate Zones (LCZ)
+          ainsi que leurs valeurs d'îlot de chaleur urbain (ICU). La carte
+          inclut également l'affichage des bâtiments avec un zoom très bas,
+          réalisé à l'aide de l'outil Tippecanoe.
         </li>
         <li>
-          Une fonction de traduction des offres (toute langue --> français |
-          français --> anglais)
+          Des boîtes de description sont créées à l'aide de HTML/CSS/Bootstrap
+          pour fournir des informations supplémentaires.
         </li>
         <li>
-          Un chatbot qui apporte une assistance à l'utilisateur dans sa
-          candidature
+          Une carte est également présente, affichant les LCZ identifiées à
+          l'aide de MapBox.
         </li>
         <li>
-          Une aide à la candidature matérialisée par une redirection vers des
-          liens contenant divers conseils (pour la rédaction du CV, l'entretien
-          d'embauche...)
+          Une légende pour cette carte LCZ est générée avec D3.js, une
+          bibliothèque JavaScript pour la manipulation des données.
+        </li>
+        <li>
+          Une carte de chaleur (heatmap) est créée avec AnyChart, permettant de
+          visualiser les variations de température.
+        </li>
+        <li>
+          Un graphique radar interagit avec la zone d'habitation sélectionnée et
+          la carte de chaleur créée avec D3.js.
+        </li>
+        <li>
+          Des diagrammes à barres interactifs sont créés avec D3.js pour fournir
+          une visualisation supplémentaire.
         </li>
       </ul>
     </div>
 
-    <h4 class="ml-36 mt-2.5 font-bold text-lg">Modèles utilisés</h4>
+    <!-- <h4 class="ml-36 mt-2.5 font-bold text-lg">Modèles utilisés</h4> -->
+    <h4 class="ml-36 mt-2.5 font-bold text-lg">Application Django:</h4>
 
     <div class="ml-36 mt-1.5 max-w-3xl">
       <ul class="list-disc ml-6">
