@@ -174,43 +174,42 @@
 
     <!-- <h4 class="ml-36 mt-2.5 font-bold text-lg">Modèles utilisés</h4> -->
     <h4 class="ml-2 md:ml-36 font-bold mt-8 text-3xl">Application Django:</h4>
-
-    <div class="mt-1.5 list-disc ml-6">
-      <ul class="list-disc ml-6">
+    <div class="ml-2 md:ml-36 mt-1.5 max-w-4xl">
+      <p class="mt-1.5 ml-8">
+        Vous pouvez trouver la version bêta de l'application sur le lien suivant
+        : https://aissatheprogrammer.github.io/icu_website/
+      </p>
+      <ul class="mt-1.5 list-disc ml-6">
         <li>
-          Azure Named Entity Recognition (NER) et modèle naïf correspondant
+          Une carte MapBox affiche les différentes Local Climate Zones (LCZ)
+          ainsi que leurs valeurs d'îlot de chaleur urbain (ICU). La carte
+          inclut également l'affichage des bâtiments avec un zoom très bas,
+          réalisé à l'aide de l'outil Tippecanoe.
         </li>
-        <p class="mt-1.5 ml-8 italic">
-          L'API d'Azure Named Entity Recognition et le modèle naïf correspondant
-          nous ont servi à identifier les compétences présentes dans le CV pdf
-          de l'utilisateur pour les faire correspondre à une liste d'offres
-          contenant les compétences extraites du CV.
-        </p>
-        <li class="mt-1.5">Keywords extraction (KeyBERT)</li>
-        <p class="mt-1.5 ml-8 italic">
-          KeyBERT est un projet Python qui a pour but de simplifier l'extraction
-          de mots-clés d'un texte. Ce modèle nous a servi à extraire les
-          mots-clés de la description d'une offre pour laquelle l'utilisateur
-          aimerait postuler. Ces mots-clés sont ensuite utilisés pour adapter la
-          génération de la lettre de motivation à la description de l'offre en
-          question.
-        </p>
-        <li class="mt-1.5">
-          Génération d'une lettre de motivation avec le module de complétion de
-          l'API OpenAI
+        <li>
+          Des boîtes de description sont créées à l'aide de HTML/CSS/Bootstrap
+          pour fournir des informations supplémentaires.
         </li>
-        <p class="mt-1.5 ml-8 italic">
-          L'API d'OpenAI fournit un service de complétion permettant de générer
-          du texte à partir d'un bout de texte écrit par l'utilisateur. Nous
-          l'avons utilisée pour générer une lettre de motivation adaptée à
-          l'offre sélectionnée par l'utilisateur et à son profil.
-        </p>
-        <li class="mt-1.5">Détection du langage et traduction</li>
-        <p class="mt-1.5 ml-8 italic">
-          Les bibliothèques python utilisées sont langdetect et deeptranslator.
-          La première permet de détecter le langage utilisé dans le texte et la
-          seconde permet de le traduire.
-        </p>
+        <li>
+          Une carte est également présente, affichant les LCZ identifiées à
+          l'aide de MapBox.
+        </li>
+        <li>
+          Une légende pour cette carte LCZ est générée avec D3.js, une
+          bibliothèque JavaScript pour la manipulation des données.
+        </li>
+        <li>
+          Une carte de chaleur (heatmap) est créée avec AnyChart, permettant de
+          visualiser les variations de température.
+        </li>
+        <li>
+          Un graphique radar interagit avec la zone d'habitation sélectionnée et
+          la carte de chaleur créée avec D3.js.
+        </li>
+        <li>
+          Des diagrammes à barres interactifs sont créés avec D3.js pour fournir
+          une visualisation supplémentaire.
+        </li>
       </ul>
     </div>
 
@@ -230,5 +229,15 @@
         },
       });
     </script>
+
+    <div class="flex justify-end">
+      <a href="https://github.com/aissatheprogrammer/" target="_blank">
+        <img
+          src="../img/contact-logos/github-logo.svg"
+          alt=""
+          class="mb-4 mr-7 w-11 mt-7"
+        />
+      </a>
+    </div>
   </body>
 </html>
