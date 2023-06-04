@@ -82,89 +82,86 @@
       />
     </div> -->
 
-    <h3 class="ml-2 md:ml-36 font-bold mt-8 text-3xl">Description</h3>
+    <h3 class="ml-2 md:ml-36 font-bold mt-8 text-3xl">Description:</h3>
     <p class="ml-2 md:ml-36 mt-4 max-w-5xl">
-      Deux applications ont été développées, l'une avec Django et l'autre avec
-      Flask : <br />
+      Two applications have been developed, one using Django and the other using
+      Flask: <br />
       <br />
-      L'application Flask a pour objectif de raconter des histoires à partir de
-      données afin de sensibiliser les citoyens de la ville de Grenoble au
-      phénomène des îlots de chaleur urbains. Elle présente des graphiques
-      interactifs et personnalisés en fonction de la localisation de
-      l'utilisateur. Les données utilisées sont mises à disposition par l'équipe
-      Open Data de la métropole pour encourager différentes collectivités de la
-      métropole à rendre leurs jeux de données accessibles en open data.
+      The Flask application aims to tell stories based on data to raise
+      awareness among citizens of the city of Grenoble about the phenomenon of
+      urban heat islands. It presents interactive and personalized graphs based
+      on the user's location. The data used is provided by the Open Data team of
+      the metropolis to encourage different local authorities in the metropolis
+      to make their datasets accessible as open data.
       <br /><br />
-      L'application Django a été créée et mise à disposition des communes de la
-      métropole de Grenoble. Son objectif est d'estimer les îlots de chaleur
-      urbains propres à chaque commune. L'estimation permet d'alerter les
-      scientifiques de la métropole ou de l'Université Grenoble Alpes (UGA) en
-      cas de résultats inattendus prédits par les deux algorithmes mis en place.
-      Le premier algorithme utilise des données numériques en entrée, tandis que
-      le second utilise des images satellites. Ces algorithmes estiment la
-      classe à laquelle chaque commune appartient parmi les 5 classes créées en
-      collaboration avec les scientifiques de la métropole. Chaque classe
-      indique une fourchette de différence de température entre une ville de
-      référence (utilisée pour la comparaison) et la ville de Grenoble, en
-      prenant en compte plusieurs critères choisis par les scientifiques de la
-      métropole.
+      The Django application was developed and made accessible to the
+      municipalities within the Grenoble metropolis with the purpose of
+      assessing the specific urban heat islands in each municipality. This
+      estimation serves to alert scientists from the metropolis or the
+      University of Grenoble Alpes (UGA) in the event of unforeseen results
+      predicted by the two implemented algorithms. The first algorithm utilizes
+      numerical data as input, while the second algorithm relies on satellite
+      images. These algorithms determine the classification of each municipality
+      from the 5 classes that were collaboratively established with the
+      metropolis's scientists. Each class represents a temperature difference
+      range between a reference city (used for comparison) and Grenoble,
+      considering various criteria selected by the metropolis's scientists.
     </p>
-    <h4 class="ml-2 md:ml-36 font-bold mt-8 text-3xl">Application Flask:</h4>
+    <h4 class="ml-2 md:ml-36 font-bold mt-8 text-3xl">Flask Application:</h4>
 
     <div class="ml-2 md:ml-36 mt-1.5 max-w-4xl">
       <p class="mt-1.5">
-        Vous pouvez trouver la version bêta de l'application sur le lien suivant
-        : https://aissatheprogrammer.github.io/icu_website/
+        You can find the beta version of the application at the following link:
+        https://aissatheprogrammer.github.io/icu_website/
       </p>
       <ul class="mt-1.5 list-disc ml-6">
         <li>
-          Une carte MapBox affiche les différentes Local Climate Zones (LCZ)
-          ainsi que leurs valeurs d'îlot de chaleur urbain (ICU). La carte
-          inclut également l'affichage des bâtiments avec un zoom très bas,
-          réalisé à l'aide de l'outil Tippecanoe.
+          A MapBox map displays different Local Climate Zones (LCZ) along with
+          their Urban Heat Island (ICU) values. The map also includes the
+          display of buildings at a very low zoom level, created using the
+          Tippecanoe tool.
         </li>
         <li>
-          Des boîtes de description sont créées à l'aide de HTML/CSS/Bootstrap
-          pour fournir des informations supplémentaires.
+          Description boxes are created using HTML/CSS/Bootstrap to provide
+          additional information.
         </li>
         <li>
-          Une carte est également présente, affichant les LCZ identifiées à
-          l'aide de MapBox.
+          A map is also present, showing the identified LCZs using MapBox.
         </li>
         <li>
-          Une légende pour cette carte LCZ est générée avec D3.js, une
-          bibliothèque JavaScript pour la manipulation des données.
+          A legend for this LCZ map is generated using D3.js, a JavaScript
+          library for data manipulation.
         </li>
         <li>
-          Une carte de chaleur (heatmap) est créée avec AnyChart, permettant de
-          visualiser les variations de température.
+          A heat map is created using AnyChart to visualize temperature
+          variations.
         </li>
         <li>
-          Un graphique radar interagit avec la zone d'habitation sélectionnée et
-          la carte de chaleur créée avec D3.js.
+          An interactive radar chart interacts with the selected residential
+          area and the heat map created with D3.js.
         </li>
         <li>
-          Des diagrammes à barres interactifs sont créés avec D3.js pour fournir
-          une visualisation supplémentaire.
+          Interactive bar charts are created using D3.js to provide additional
+          visualization.
         </li>
       </ul>
     </div>
 
     <!-- <h4 class="ml-36 mt-2.5 font-bold text-lg">Modèles utilisés</h4> -->
-    <h4 class="ml-2 md:ml-36 font-bold mt-8 text-3xl">Application Django:</h4>
+    <h4 class="ml-2 md:ml-36 font-bold mt-8 text-3xl">Django Application:</h4>
     <div class="ml-2 md:ml-36 mt-1.5 max-w-4xl">
       <p class="mt-1.5">
-        La deuxième application créée avec Django était destinée aux
-        collectivités de la Métropole, où nous avions besoin d'une partie gérant
-        les accès utilisateurs, leur enregistrement, ainsi qu'une page
-        d'administration pour gérer leurs droits. C'est pour cette raison que
-        j'ai choisi d'utiliser Django, car il facilite grandement ces
-        fonctionnalités. En plus de cela, j'ai implémenté deux types
-        d'algorithmes une fois que l'utilisateur accède au site.
+        The second application created with Django was intended for the local
+        authorities of the Metropolis, where we needed a part to manage user
+        access, their registration, as well as an administration page to manage
+        their rights. That's why I chose to use Django, as it greatly
+        facilitates these functionalities. In addition to that, I implemented
+        two types of algorithms once the user accesses the site.
+
         <br />
         <br />
-        Le premier algorithme est l'Extra Tree Classifier, qui est utilisé pour
-        des données numériques.
+        The first algorithm used is an Extra Tree Classifier, which is used for
+        numerical data.
       </p>
 
       <img
@@ -174,22 +171,20 @@
       />
 
       <p class="mt-1.5">
-        Le deuxième algorithme prend en entrée une image satellite d'un quartier
-        pour prédire sa valeur d'îlot de chaleur urbain. J'utilise MobileNet
-        pour l'extraction des caractéristiques de l'image, et un algorithme
-        XGBClassifier pour la prédiction. Ce dernier me donne un score f1 macro
-        de 100%.
+        The second algorithm takes a satellite image of a neighborhood as input
+        to predict its urban heat island value. I use MobileNet for feature
+        extraction from the image and an XGBClassifier algorithm for prediction.
+        The latter gives me a macro f1 score of 100%.
         <br />
         <br />
-        Je vous invite à consulter le
+        I invite you to check the
         <a
           href="../projects-thumbnail/icu-ia/E1_Mabroumi-Aissa (1).pdf"
           target="_blank"
           class="text-blue-500 hover:text-blue-700 underline"
-          >lien suivant</a
+          >following link</a
         >
-        pour obtenir plus de détails sur les démarches entreprises et les
-        justifications des choix effectués
+        for more details on the steps taken(in French).
       </p>
     </div>
 

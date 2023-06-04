@@ -102,84 +102,74 @@
       />
     </div> -->
 
-    <h3 class="ml-2 md:ml-36 font-bold mt-8 text-3xl">Description</h3>
+    <h3 class="ml-2 md:ml-36 font-bold mt-8 text-3xl">Description:</h3>
     <p class="ml-2 md:ml-36 mt-4 max-w-5xl">
-      Application Django qui a pour but d'aider les personnes dans leur
-      recherche d'emploi dans le domaine de la data et de l'IA.
+      The Django application aims to assist individuals in their job search in
+      the field of data and AI.
     </p>
-    <h4 class="ml-2 md:ml-36 mt-2.5 font-bold text-lg">
-      Contenu de l'application:
-    </h4>
+    <h4 class="ml-2 md:ml-36 mt-2.5 font-bold text-lg">Application Content:</h4>
 
     <div class="ml-2 md:ml-36 mt-1.5 max-w-4xl">
       <ul class="list-disc ml-6">
+        <li>A dashboard presenting statistics on available job offers.</li>
+        <li>Mapping of job offers throughout France.</li>
         <li>
-          Un dashboard présentant des statistiques sur les offres disponibles
-        </li>
-        <li>Une cartographie des offres dans toute la France</li>
-        <li>
-          Un système de recherche avancée qui permet d'afficher les offres
-          d'emploi correspondant à certains critères (métier, date,
-          mots-clés...)
+          An advanced search system that displays job offers matching specific
+          criteria (occupation, date, keywords, etc.).
         </li>
         <li>
-          Un système de génération de lettre de motivation adaptée à l'intitulé
-          et aux mots-clés d'une offre sélectionnée par l'utilisateur ainsi qu'à
-          son profil
+          A system for generating a tailored cover letter based on the job
+          title, keywords from a selected job offer, and the user's profile.
         </li>
         <li>
-          Une fonction de traduction des offres (toute langue --> français |
-          français --> anglais)
+          A translation feature for job offers (any language to French | French
+          to English).
         </li>
         <li>
-          Un chatbot qui apporte une assistance à l'utilisateur dans sa
-          candidature
+          A chatbot that provides assistance to the user during the application
+          process.
         </li>
         <li>
-          Une aide à la candidature matérialisée par une redirection vers des
-          liens contenant divers conseils (pour la rédaction du CV, l'entretien
-          d'embauche...)
+          Application support by redirecting users to relevant links containing
+          various tips (CV writing, job interviews, etc.).
         </li>
       </ul>
     </div>
 
-    <h4 class="ml-2 md:ml-36 mt-2.5 font-bold text-lg">Modèles utilisés</h4>
+    <h4 class="ml-2 md:ml-36 mt-2.5 font-bold text-lg">Used Models:</h4>
 
     <div class="ml-2 md:ml-36 mt-1.5 max-w-4xl">
       <ul class="list-disc ml-6">
         <li>
-          Azure Named Entity Recognition (NER) et modèle naïf correspondant
+          Azure Named Entity Recognition (NER) and corresponding naive model:
         </li>
         <p class="mt-1.5 ml-8 italic">
-          L'API d'Azure Named Entity Recognition et le modèle naïf correspondant
-          nous ont servi à identifier les compétences présentes dans le CV pdf
-          de l'utilisateur pour les faire correspondre à une liste d'offres
-          contenant les compétences extraites du CV.
+          he Azure Named Entity Recognition API and the corresponding naive
+          model are used to identify the skills present in the user's PDF CV and
+          match them to a list of job offers containing the extracted skills.
         </p>
-        <li class="mt-1.5">Keywords extraction (KeyBERT)</li>
+        <li class="mt-1.5">Keyword extraction (KeyBERT):</li>
         <p class="mt-1.5 ml-8 italic">
-          KeyBERT est un projet Python qui a pour but de simplifier l'extraction
-          de mots-clés d'un texte. Ce modèle nous a servi à extraire les
-          mots-clés de la description d'une offre pour laquelle l'utilisateur
-          aimerait postuler. Ces mots-clés sont ensuite utilisés pour adapter la
-          génération de la lettre de motivation à la description de l'offre en
-          question.
+          KeyBERT is a Python project that simplifies the extraction of keywords
+          from text. This model is used to extract keywords from the description
+          of a job offer for which the user would like to apply. These keywords
+          are then used to customize the generation of the cover letter based on
+          the specific job offer description.
         </p>
         <li class="mt-1.5">
-          Génération d'une lettre de motivation avec le module de complétion de
-          l'API OpenAI
+          Cover letter generation using the OpenAI completion module:
         </li>
         <p class="mt-1.5 ml-8 italic">
-          L'API d'OpenAI fournit un service de complétion permettant de générer
-          du texte à partir d'un bout de texte écrit par l'utilisateur. Nous
-          l'avons utilisée pour générer une lettre de motivation adaptée à
-          l'offre sélectionnée par l'utilisateur et à son profil.
+          The OpenAI API provides a completion service that generates text based
+          on a prompt provided by the user. It is used to generate a cover
+          letter tailored to the job offer selected by the user and their
+          profile.
         </p>
-        <li class="mt-1.5">Détection du langage et traduction</li>
+        <li class="mt-1.5">Language detection and translation:</li>
         <p class="mt-1.5 ml-8 italic">
-          Les bibliothèques python utilisées sont langdetect et deeptranslator.
-          La première permet de détecter le langage utilisé dans le texte et la
-          seconde permet de le traduire.
+          The Python libraries used are langdetect and deeptranslator. The
+          former is used to detect the language used in the text, while the
+          latter is used for translation purposes.
         </p>
       </ul>
     </div>
